@@ -75,14 +75,14 @@ void loop() {
 
 //RELAY CONTROL MECHANISM - FOR FILAMENT AND MIST MAKER
 //NEED CALIBRATION DEPENDING ON THE ENVIRONMENT
-//THRESHOLD VALUE = 80% WITH +-5% TOLERANCE
-  if (humidity < 75) {
-    digitalWrite(4, LOW);
-    digitalWrite(5, HIGH);
-  }
-  else if (humidity > 85){
+//THRESHOLD VALUE = 80% WITH +-2% TOLERANCE
+  if (humidity < 79) {
     digitalWrite(5, LOW);
     digitalWrite(4, HIGH);
+  }
+  else if (humidity > 81){
+    digitalWrite(4, LOW);
+    digitalWrite(5, HIGH);
   }
 
 }
